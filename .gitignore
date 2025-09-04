@@ -1,0 +1,44 @@
+# Python build/cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+smart-retail/   
+
+# Jupyter
+**/.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Environment variables / secrets
+.env
+.env.local
+*.key
+*.pem
+
+# Data (large or raw files)
+data/raw/
+data/processed/
+vector_store/
+
+# Logs
+logs/
+*.log
+
+# OS / IDE junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Streamlit cache
+.streamlit/
+.streamlit/secrets.toml
