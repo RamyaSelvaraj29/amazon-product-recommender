@@ -1,4 +1,3 @@
-# src/db/mysql_loader.py
 """
 Load processed parquet products into MySQL.
 
