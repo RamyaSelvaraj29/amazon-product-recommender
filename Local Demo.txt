@@ -1,0 +1,50 @@
+1. Start MySQL (your Docker container)
+
+You already have a container named retail-mysql:
+
+docker start retail-mysql-3307
+
+
+This makes your products table available. ✅
+
+2. Start FastAPI backend
+
+From your project root (where src/ lives):
+
+uvicorn src.api.main:app --reload --port 8000
+
+
+--reload is for development; you can omit it for demos.
+
+Visit http://127.0.0.1:8000/docs
+ in your browser to see the API UI.
+
+GET /health should return something like:
+
+{
+  "status": "ok",
+  "db_ok": true,
+  "chroma_count": 30238
+}
+
+3. Start Streamlit UI
+
+In another terminal (still project root):
+
+streamlit run src/ui/app.py
+
+
+This will open http://localhost:8501
+ in your browser.
+
+4. Local .env file
+
+Make sure your .env file (not committed to git) has:
+
+OPENAI_API_KEY=sk-...
+MYSQL_USER=root
+MYSQL_PASSWORD=yourpassword
+MYSQL_HOST=127.0.0.1
+MYSQL_PORT=3307
+MYSQL_DB=retail_db
+API_URL=http://127.0.0.1:8000
