@@ -1,1 +1,1 @@
-# smart-retail-assistant
+# amazon-product-recommender
